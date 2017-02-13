@@ -26,7 +26,7 @@ class ActionsCollectionView: UICollectionView {
         if layout.scrollDirection == .horizontal {
             return visualStyle.actionViewSize.height
         } else {
-            return visualStyle.actionViewSize.height * CGFloat(self.numberOfItems(inSection: 0))
+            return visualStyle.actionViewSize.height * min(3.5, CGFloat(self.numberOfItems(inSection: 0)))
         }
     }
 
